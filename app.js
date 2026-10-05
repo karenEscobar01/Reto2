@@ -24,3 +24,12 @@ function limpiarMensaje() {
   messageDiv.className = 'message hidden';
   messageDiv.textContent = '';
 }
+
+const calcularPromedio = (arr) => arr.length === 0 ? 0 : arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
+
+function agregarAlumno(nombre, n1, n2, n3) {
+  if (nombres.length >= MAX_ALUMNOS) return;
+
+  nombres.push(nombre);
+  notas.push([n1, n2, n3]);
+}
