@@ -10,3 +10,17 @@ const messageDiv = document.getElementById('message');
 const resultsCard = document.getElementById('results-card');
 const resultsContent = document.getElementById('results-content');
 const btnSubmit = document.getElementById('btn-submit');
+
+function esNotaValida(nota) {
+  return !isNaN(nota) && nota >= 10 && nota <= 100;
+}
+
+function mostrarMensaje(texto, tipo = 'error') {
+  messageDiv.textContent = texto;
+  messageDiv.className = `message ${tipo}`;
+}
+
+function limpiarMensaje() {
+  messageDiv.className = 'message hidden';
+  messageDiv.textContent = '';
+}
